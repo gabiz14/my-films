@@ -6,6 +6,8 @@ const TableHeader = () => {
             <tr>
                 <th>Name</th>
                 <th>Genre</th>
+                <th>Year</th>
+                <th>Review</th>
             </tr>
         </thead>
     );
@@ -17,6 +19,8 @@ const TableBody = props => {
             <tr key={index}>
                 <td>{row.name}</td>
                 <td>{row.genre}</td>
+                <td>{row.year}</td>
+                <td>{row.review}</td>
                 <td><button onClick={() => props.removeFilm(index)}>Delete</button></td>
             </tr>
         );
