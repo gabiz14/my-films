@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Table from './Table';
 import Form from './Form';
+import Head from './Head';
+import Foot from './Foot';
 
 class App extends Component {
   state = {
@@ -27,11 +29,13 @@ class App extends Component {
 
       return (
         <div className="container">
+            <Head />
             <Table 
               filmsData={films}
               removeFilm={this.removeFilm} 
             />
             <Form handleSubmit={this.handleSubmit} />
+            <Foot />
         </div>
     );
   }
